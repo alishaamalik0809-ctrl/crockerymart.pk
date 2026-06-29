@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { products } from "@/data/products";
 import { useStore } from "@/context/StoreContext";
+import ThreeBackground from "@/components/ThreeBackground";
 
 export default function Home() {
   const { addToCart, toggleWishlist, isInWishlist } = useStore();
@@ -55,6 +56,10 @@ export default function Home() {
             className="object-cover"
           />
         </div>
+        
+        {/* 3D Background */}
+        <ThreeBackground />
+
         <div className="max-w-[1200px] w-full mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 flex flex-col items-start gap-6 animate-slide-up">
             <span className="bg-amber-500 text-gray-950 font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full shadow-lg">
